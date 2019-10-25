@@ -3,7 +3,7 @@ The repository will contain code to load a GPT-2 model, perform text generation 
 
 ## Examples
 
-I fine-tuned 2 small GPT-2 models (124MB) and they both are running live on Twitter. The following samples correspond to the outputs of suchs models. 
+I fine-tuned 2 small GPT-2 models (117MB) and they both are running live on Twitter. The following samples correspond to the outputs of such models. 
 
 **Eminem Bot Lyrics** ([@rap_god_bot](https://twitter.com/rap_god_bot))
 
@@ -21,9 +21,20 @@ I fine-tuned 2 small GPT-2 models (124MB) and they both are running live on Twit
 
 ### GPT-2 and Transformer Models
 
+This year, [OpenAI](https://openai.com/) released a new set of language generation models: [GPT-2](https://openai.com/blog/better-language-models/). These large-scale unsupervised language models were able to generate coherent paragraphs of text while achieving state-of-the-art performance on many language modeling benchmarks.
+
+For storage and memory purposes I decided to fine-tune the smallest one (117MB) though the 335MB was genenerating more diverse outputs. 
+
+These are some resources that I used:
+
+- Understand the Transformer architecture: [[Paper](https://s3-us-west-2.amazonaws.com/openai-assets/research-covers/language-unsupervised/language_understanding_paper.pdf)], [[Blog_1](https://openai.com/blog/language-unsupervised/)][[Blog_2](http://jalammar.github.io/illustrated-transformer/)]
+- Understand GPT-2: [[Paper](https://www.techbooky.com/wp-content/uploads/2019/02/Better-Language-Models-and-Their-Implications.pdf)], [[Blog_1](https://openai.com/blog/better-language-models/)][[Blog_2](http://jalammar.github.io/illustrated-gpt2/)]
+- Understand code, download models and fine-tune them: [[gpt-2-simple](https://github.com/minimaxir/gpt-2-simple)] [[OpenAI](https://github.com/openai/gpt-2)]
+
+
 ### LyricsGenious Package 
 
-In order to download all the song lyrics that I used to fine-tune the GPT-2 model, I used a great library called [LyricsGenious](https://github.com/johnwmillr/LyricsGenius). This package offers a really clean interface that interactuates with the [Genious API](https://genius.com/signup_or_login) and makes easy the download of lyrics. 
+In order to download all the song lyrics that I used to fine-tune the GPT-2 model, I used a great library called [LyricsGenious](https://github.com/johnwmillr/LyricsGenius). This package offers a really clean interface that interacts with the [Genious API](https://genius.com/signup_or_login) and makes easy the download of lyrics. 
 
 ```
 import lyricsgenius
@@ -86,7 +97,7 @@ Check this [blogpost](https://linuxize.com/post/create-a-linux-swap-file/) for m
 I created a function to create an image and draw text on it using PIL. 
 
 ```
-def print_text_in_image(text, font_path='Pillow/Tests/fonts/FreeMono.ttf', image_color=(245, 235, 225)):
+def print_text_in_image(text, font_path='Pillow/Tests/fonts/FreeMono.ttf', image_color=(255, 255, 225)):
     # Create a blank image
     # image = np.uint8(np.ones((1100, 1000, 3)) * 255)
     image = np.ones((1100, 1000, 3))
@@ -118,4 +129,33 @@ def print_text_in_image(text, font_path='Pillow/Tests/fonts/FreeMono.ttf', image
 
 ### Sending E-mails with Python
 
+I wanted to set up an automatic e-mail messaging service so every time the bot is down I could get a notification. I ended up using SMTP_SSL and a gmail account: 
+
+```
+import ssl
+import json
+import smtplib
+
+
+class EmailSender:
+    def __init__(self, authentication_json_path):
+        with open(authentication_json_path, 'r') as f:
+            authentication_params = json.load(f)
+
+        self.password = authentication_params['PASSWORD']
+        self.email = authentication_params['EMAIL']
+
+        # Port for SSL
+        self.port = 465
+
+        # Create a secure SSL context
+        self.context = ssl.create_default_context()
+
+    def send_email(self, email_receiver, message):
+        with smtplib.SMTP_SSL("smtp.gmail.com", self.port, context=self.context) as server:
+            server.login(self.email, self.password)
+            server.sendmail(self.email, email_receiver, message)
+```
+
+More information about how to set an e-mail service can be found [here](https://realpython.com/python-send-email/).
 
