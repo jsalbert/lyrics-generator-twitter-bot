@@ -27,9 +27,9 @@ For storage and memory purposes I decided to fine-tune the smallest one (117MB) 
 
 These are some resources that I used:
 
-- Understand the Transformer architecture: [[Paper](https://s3-us-west-2.amazonaws.com/openai-assets/research-covers/language-unsupervised/language_understanding_paper.pdf)], [[Blog_1](https://openai.com/blog/language-unsupervised/)][[Blog_2](http://jalammar.github.io/illustrated-transformer/)]
-- Understand GPT-2: [[Paper](https://www.techbooky.com/wp-content/uploads/2019/02/Better-Language-Models-and-Their-Implications.pdf)], [[Blog_1](https://openai.com/blog/better-language-models/)][[Blog_2](http://jalammar.github.io/illustrated-gpt2/)]
-- Understand code, download models and fine-tune them: [[gpt-2-simple](https://github.com/minimaxir/gpt-2-simple)] [[OpenAI](https://github.com/openai/gpt-2)]
+- Understand the Transformer architecture: [[Paper](https://s3-us-west-2.amazonaws.com/openai-assets/research-covers/language-unsupervised/language_understanding_paper.pdf)], [[Blog_1](https://openai.com/blog/language-unsupervised/)], [[Blog_2](http://jalammar.github.io/illustrated-transformer/)]
+- Understand GPT-2: [[Paper](https://www.techbooky.com/wp-content/uploads/2019/02/Better-Language-Models-and-Their-Implications.pdf)], [[Blog_1](https://openai.com/blog/better-language-models/)], [[Blog_2](http://jalammar.github.io/illustrated-gpt2/)]
+- Understand code, download models and fine-tune them: [[gpt-2-simple](https://github.com/minimaxir/gpt-2-simple)], [[OpenAI](https://github.com/openai/gpt-2)]
 
 
 ### LyricsGenious Package 
