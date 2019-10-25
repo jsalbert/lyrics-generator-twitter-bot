@@ -65,7 +65,7 @@ This [post](https://realpython.com/twitter-bot-python-tweepy/) was very useful t
 
 ### Swap files
 
-I used the Free Tier of [Amazon EC2 instances](https://aws.amazon.com/ec2/) to deploy the models. Even though they were the smallest GPT-2 models, they weren't fitting on RAM memory. The solution I opted to was creating a Swap file in the system. 
+I used the Free Tier of [Amazon EC2 instances](https://aws.amazon.com/ec2/) to deploy the models. Even though they were the smallest GPT-2 models, they weren't fitting on RAM memory. The solution I opted for was creating a Swap space in the system. 
 
 ```
 Swap is a space on a disk that is used when the amount of physical RAM memory is full. When a Linux system runs out of RAM, inactive pages are moved from the RAM to the swap space.
