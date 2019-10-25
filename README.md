@@ -3,7 +3,7 @@ The repository will contain code to load a GPT-2 model, perform text generation 
 
 ## Examples
 
-I fine-tuned 2 small GPT-2 models (117MB) and they both are running live on Twitter. The following samples correspond to the outputs of such models. 
+I fine-tuned 2 small GPT-2 models (117MB) and created twitter bots that interact with Twitter users. The following samples correspond to the outputs of such models. 
 
 **Eminem Bot Lyrics** ([@rap_god_bot](https://twitter.com/rap_god_bot))
 
