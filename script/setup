@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+. script/env
+pip3 install --upgrade pip
+pip3 install -r requirements.txt
+
+# Run Setup
+python setup.py
