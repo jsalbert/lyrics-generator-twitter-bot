@@ -3,7 +3,7 @@ The repository contains code to load a GPT-2 model, perform text generation and 
 
 ## Examples
 
-I fine-tuned 2 small GPT-2 models (117MB) to generate Eminem lyrics as well as Storytelling lyrics.  The following samples correspond to the outputs of such models:
+I fine-tuned 2 small GPT-2 models (124M parameters) to generate Eminem lyrics as well as Storytelling lyrics.  The following samples correspond to the outputs of such models:
 
 **Eminem Bot Lyrics** ([@rap_god_bot](https://twitter.com/rap_god_bot))
 
@@ -33,7 +33,7 @@ sudo apt install python3-pip
 script/setup
 ```
 
-3. Download the example model (a small 124M pre-trained GPT-2 model) or place yours under `models/` folder:
+3. Download the example model (a small 124M parameters pre-trained GPT-2 model) or place yours under `models/` folder:
 
 ```
 python3 download_example_model.py 
@@ -50,7 +50,7 @@ python3 download_example_model.py
 
 This year, [OpenAI](https://openai.com/) released a new set of language generation models: [GPT-2](https://openai.com/blog/better-language-models/). These large-scale unsupervised language models were able to generate coherent paragraphs of text while achieving state-of-the-art performance on many language modeling benchmarks.
 
-For storage and memory purposes I decided to fine-tune the smallest one (117MB) though the 335MB was genenerating more diverse outputs. 
+For storage and memory purposes I decided to fine-tune the smallest one (124M) though the 355M was genenerating more diverse outputs.
 
 These are some resources that I used:
 
