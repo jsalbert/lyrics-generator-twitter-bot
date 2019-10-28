@@ -8,13 +8,13 @@ I fine-tuned 2 small GPT-2 models (117MB) to generate Eminem lyrics as well as S
 **Eminem Bot Lyrics** ([@rap_god_bot](https://twitter.com/rap_god_bot))
 
 <p align="center">
-  <img width="500" height="600" src="https://github.com/jsalbert/lyrics-generator-twitter-bot/blob/master/samples/eminem_sample.png">
+  <img width="500" height="600" src="https://github.com/jsalbert/lyrics-generator-twitter-bot/blob/master/samples/eminem_sample.png?raw=true">
 </p>
 
 **Music Storytelling Bot Lyrics** ([@musicstorytell](https://twitter.com/musicstorytell))
 
 <p align="center">
-  <img width="500" height="600" src=https://github.com/jsalbert/lyrics-generator-twitter-bot/blob/master/samples/musicstorytell_sample.png>
+  <img width="500" height="600" src=https://github.com/jsalbert/lyrics-generator-twitter-bot/blob/master/samples/musicstorytell_sample.png?raw=true>
 </p>
 
 ## How to run the code
