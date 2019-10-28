@@ -22,9 +22,9 @@ I fine-tuned 2 small GPT-2 models (117MB) to generate Eminem lyrics as well as S
 1. Make sure you have python 3, pip installed:
 
 ```
-$ sudo apt-get update
-$ sudo apt-get install python3
-$ sudo apt install python3-pip
+sudo apt-get update
+sudo apt-get install python3
+sudo apt install python3-pip
 ```
 
 2. Package will be installed if you write:
