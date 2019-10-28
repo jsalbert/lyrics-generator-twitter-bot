@@ -58,7 +58,7 @@ class LyricsGenerator:
 
         if mode == 'image':
             return os.path.join(song_root_path, folder_name, 'song.png')
-        elif mode== 'text':
+        elif mode == 'text':
             return os.path.join(song_root_path, folder_name, 'song.txt')
         else:
             return os.path.join(song_root_path, folder_name)
@@ -80,7 +80,7 @@ class LyricsGenerator:
         image_paths = []
 
         if len(lyrics) > max_lines:
-            lyrics_chunks = [lyrics[i:i+max_lines] for i in range(0, len(lyrics), max_lines)]
+            lyrics_chunks = [lyrics[i:i + max_lines] for i in range(0, len(lyrics), max_lines)]
             for i, lyric in enumerate(lyrics_chunks):
                 filepath_list = filepath.split('.')
                 filepath_i = ''.join(filepath_list[:-1]) + '_' + str(i) + '.' + filepath_list[-1]
