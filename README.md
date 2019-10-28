@@ -33,9 +33,15 @@ $ sudo apt install python3-pip
 script/setup
 ```
 
-3. Open [run_twitter_bot.py](https://github.com/jsalbert/lyrics-generator-twitter-bot/blob/master/run_twitter_bot.py) and modify it with your custom information. 
+3. Download the example model (a small 124M pre-trained GPT-2 model) or place yours under `models/` folder:
 
-4. Modify the [authentication files](https://github.com/jsalbert/lyrics-generator-twitter-bot/tree/master/files/authentication) to match your user / keys. 
+```
+python3 download_example_model.py 
+```
+
+4. Open the file [run_twitter_bot.py](https://github.com/jsalbert/lyrics-generator-twitter-bot/blob/master/run_twitter_bot.py) and modify it with your model file path and twitter user information. 
+
+5. Modify the [authentication files](https://github.com/jsalbert/lyrics-generator-twitter-bot/tree/master/files/authentication) to match your user / keys. More info on how to create a Twitter development account in the section below.
 
 
 ## Cool Stuff that I Used/Learned Doing the Project
