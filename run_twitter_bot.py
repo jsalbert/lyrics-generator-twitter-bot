@@ -11,7 +11,7 @@ from lyrics_generator.gpt_2 import LyricsGenerator, utils
 # Variables to set
 
 # GPT-2 Model files
-gpt_2_model_directory = 'models/model_1'
+gpt_2_model_directory = 'models/124M'
 
 # Twitter files
 twitter_user = '@'

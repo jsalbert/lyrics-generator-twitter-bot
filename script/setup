@@ -4,4 +4,4 @@ pip3 install --upgrade pip
 pip3 install -r requirements.txt
 
 # Run Setup
-python setup.py
+python3 setup.py install
