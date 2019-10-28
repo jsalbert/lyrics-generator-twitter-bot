@@ -1,9 +1,9 @@
 # Lyrics Generator Twitter Bot
-The repository will contain code to load a GPT-2 model, perform text generation and create a Twitter Bot
+The repository contains code to load a GPT-2 model, perform text generation and create a Twitter Bot that interact with Twitter users.
 
 ## Examples
 
-I fine-tuned 2 small GPT-2 models (117MB) and created twitter bots that interact with Twitter users. The following samples correspond to the outputs of such models. 
+I fine-tuned 2 small GPT-2 models (117MB) to generate Eminem lyrics as well as Storytelling lyrics.  The following samples correspond to the outputs of such models:
 
 **Eminem Bot Lyrics** ([@rap_god_bot](https://twitter.com/rap_god_bot))
 
@@ -16,6 +16,27 @@ I fine-tuned 2 small GPT-2 models (117MB) and created twitter bots that interact
 <p align="center">
   <img width="500" height="600" src=https://github.com/jsalbert/lyrics-generator-twitter-bot/blob/master/samples/musicstorytell_sample.png>
 </p>
+
+## How to run the code
+
+1. Make sure you have python 3, pip installed:
+
+```
+$ sudo apt-get update
+$ sudo apt-get install python3
+$ sudo apt install python3-pip
+```
+
+2. Package will be installed if you write:
+
+```
+script/setup
+```
+
+3. Open [run_twitter_bot.py](https://github.com/jsalbert/lyrics-generator-twitter-bot/blob/master/run_twitter_bot.py) and modify it with your custom information. 
+
+4. Modify the [authentication files](https://github.com/jsalbert/lyrics-generator-twitter-bot/tree/master/files/authentication) to match your user / keys. 
+
 
 ## Cool Stuff that I Used/Learned Doing the Project
 
