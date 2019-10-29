@@ -26,7 +26,7 @@ def reply_mentions(twitter_bot, lyrics_generator, keyword, since_id):
     new_since_id = since_id
     for tweet in tweepy.Cursor(twitter_bot.api.mentions_timeline, since_id=since_id).items():
         new_since_id = max(tweet.id, new_since_id)
-        if keyword in tweet.text.lower():
+        if keyword in tweet.text.lower() and not hasattr(tweet, 'retweeted_status'):
             prefix = tweet.text.replace(keyword, '')[1:]
             print('Generating Lyrics')
             try:
