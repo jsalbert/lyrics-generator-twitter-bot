@@ -1,5 +1,5 @@
 # Lyrics Generator Twitter Bot
-The repository contains code to load a GPT-2 model, perform text generation and create a Twitter Bot that interact with Twitter users.
+This repository contains code to load a GPT-2 model, perform text generation and create a Twitter Bot that interact with Twitter users.
 
 ## Examples
 
