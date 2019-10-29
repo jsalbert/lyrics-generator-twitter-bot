@@ -19,7 +19,7 @@ I fine-tuned 2 small GPT-2 models (124M parameters) to generate Eminem lyrics as
 
 ## How to run the code
 
-1. Make sure you have python 3, pip installed:
+1. Make sure you have python 3 and pip installed:
 
 ```
 sudo apt-get update
