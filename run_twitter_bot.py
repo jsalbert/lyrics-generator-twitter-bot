@@ -1,11 +1,10 @@
-import json
 import time
 import tweepy
 
 
-from email_service.email_sender import EmailSender
-from lyrics_generator.twitter_bot import TwitterBot
-from lyrics_generator.gpt_2 import LyricsGenerator, utils
+from email_service import EmailSender
+from twitter_bot import TwitterBot
+from lyrics_generator import LyricsGenerator, utils
 
 
 # Variables to set
@@ -14,12 +13,12 @@ from lyrics_generator.gpt_2 import LyricsGenerator, utils
 gpt_2_model_directory = 'models/124M'
 
 # Twitter files
-twitter_user = '@'
+twitter_user = '@musicstorytell'
 authentication_twitter_json_path = 'files/authentication/authentication_twitter.json'
 since_id_json_path = 'files/last_since_id.json'
 
 # If you want to receive error messages
-authentication_email_json_path = 'files/authentication/authentication_email.json'
+authentication_email_json_path = None
 
 
 def reply_mentions(twitter_bot, lyrics_generator, keyword, since_id):
@@ -28,8 +27,8 @@ def reply_mentions(twitter_bot, lyrics_generator, keyword, since_id):
         new_since_id = max(tweet.id, new_since_id)
         if keyword in tweet.text.lower() and not hasattr(tweet, 'retweeted_status'):
             prefix = tweet.text.replace(keyword, '')[1:]
-            print('Generating Lyrics')
             try:
+                print('Generating Lyrics')
                 lyrics = lyrics_generator.generate_lyrics(prefix=prefix, random_parametres=True)
                 image_paths = lyrics_generator.save_lyrics_app_default(lyrics,
                                                                        max_lines=25,
@@ -72,7 +71,7 @@ if __name__ == '__main__':
                 print('Exception reached... sleeping 15 minutes :(')
                 time.sleep(900)
 
-            utils.write_since_id_json(since_id_json_path, new_since_id)
+            utils.write_since_id_json(since_id_json_path, since_id)
             print('Sleeping 3 minutes...')
             time.sleep(180)
 
