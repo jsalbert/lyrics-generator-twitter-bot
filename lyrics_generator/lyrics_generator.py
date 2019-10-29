@@ -8,7 +8,7 @@ import tensorflow as tf
 from datetime import datetime
 from lyrics_generator.gpt_2 import model, sample, encoder
 from tensorflow.core.protobuf import rewriter_config_pb2
-from lyrics_generator.gpt_2.utils import process_lyrics, print_text_in_image, is_valid_prefix, \
+from lyrics_generator.utils import process_lyrics, print_text_in_image, is_valid_prefix, \
     generate_random_parametres, mkdir, pick_random_font
 
 
@@ -54,7 +54,8 @@ class LyricsGenerator:
         song_root_path = 'files/songs/'
         timestamp = datetime.timestamp(datetime.now())
         # Folder name is first sentence of lyric + timestamp
-        folder_name = ''.join(lyrics[0]).replace('\n', '').replace(' ', '_') + '_' + str(round(timestamp))
+        clip_char = min(len(lyrics[0]), 15)
+        folder_name = ''.join(lyrics[0][:clip_char]).replace('\n', '').replace(' ', '_') + '_' + str(round(timestamp))
 
         if mode == 'image':
             return os.path.join(song_root_path, folder_name, 'song.png')
