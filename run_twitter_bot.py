@@ -13,7 +13,7 @@ from lyrics_generator import LyricsGenerator, utils
 gpt_2_model_directory = 'models/124M'
 
 # Twitter files
-twitter_user = '@musicstorytell'
+twitter_user = '@'
 authentication_twitter_json_path = 'files/authentication/authentication_twitter.json'
 since_id_json_path = 'files/last_since_id.json'
 
